@@ -23,3 +23,7 @@ manifest.json
 pages.json
 uni.promisify.adaptor.js
 uni.scss
+offiaccount.config.js
+access_token.json
+jsapi_ticket.json
+validate.js

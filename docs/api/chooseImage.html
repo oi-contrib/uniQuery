@@ -1,5 +1,5 @@
 <header>
-    getLocation 获取地理位置
+    chooseImage 选择图片
 </header>
 <div class="version">
     0.2.0 新增
@@ -48,7 +48,7 @@
     使用
 </h2>
 <pre tag="javascript">
-uni.$uniQuery.getLocation.then(res=> {
+uni.$uniQuery.chooseImage.then(res=> {
     // 获取成功
 })catch(err=>{
     // 获取失败
@@ -58,34 +58,12 @@ uni.$uniQuery.getLocation.then(res=> {
     其中，res的数据格式如下：
 </p>
 <pre tag="javascript">
-{
-    longitude: number // 经度
-    latitude: number // 纬度
-}
+// 数组的条目是base64图片地址
+Array&lt;string&gt;
 </pre>
 <h2>
     权限相关
 </h2>
-<h3>
-    微信小程序
-</h3>
-<p>
-    需要提前在
-    <span class="special">manifest.json</span>
-    中进行权限申请的注册：
-</p>
-<pre tag="javascript">
-"mp-weixin": {
-    "permission": {
-        "scope.userLocation": {
-            "desc": "您的位置信息将用于小程序页面"
-        }
-    },
-    "requiredPrivateInfos": [
-        "getLocation"
-    ]
-}
-</pre>
 <h3>
     微信公众号
 </h3>
@@ -96,6 +74,6 @@ uni.$uniQuery.getLocation.then(res=> {
 </p>
 <pre tag="javascript">
 wx.config({
-    jsApiList: ["getLocation"]
+    jsApiList: ["chooseImage", "getLocalImgData"]
 })
 </pre>

@@ -3,6 +3,12 @@
     <view class="btn" @click="goto('getLocation')">
       getLocation 获取地理位置
     </view>
+    <view class="btn" @click="goto('saveAlbum')">
+      saveAlbum 保存图片到相册
+    </view>
+	<view class="btn" @click="goto('chooseImage')">
+	  chooseImage 选择图片
+	</view>
   </view>
 </template>
 

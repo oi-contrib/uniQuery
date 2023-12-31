@@ -92,17 +92,26 @@ var changeNav = function (navName, isInit) {
 
     changeMenu({
         "guide": "install",
-        "component": "tabs",
+        "component": "form",
         "api": "getLocation"
     }[routerObj.router[0]], isInit);
 };
 
+var exampleUrl;
+if (needCache) {
+    exampleUrl = './examples/index.html';
+} else {
+    // exampleUrl = 'http://localhost:8080';
+    exampleUrl = './examples/index.html';
+}
+
 var contentEl = document.getElementById('content-id');
 var iframeEl = document.getElementById('example-iframe-id');
+iframeEl.setAttribute('src', exampleUrl);
 
 var isHome = true;
 var changeMenu = function (menuName, isInit) {
-    if (menuName) routerObj.router[1] = menuName;
+    if (!isInit || !routerObj.router[1]) routerObj.router[1] = menuName;
 
     fetchData("./" + routerObj.router[0] + "/" + routerObj.router[1] + ".html").then(function (res) {
         if (!isInit) window.location.href = "#/" + routerObj.router[0] + "/" + routerObj.router[1];
@@ -110,10 +119,10 @@ var changeMenu = function (menuName, isInit) {
         contentEl.innerHTML = res + getFooterTemplate(routerObj.router[0] + "/" + routerObj.router[1] + ".html");
         if (['component', 'api'].indexOf(routerObj.router[0]) > -1) {
             isHome = false;
-            iframeEl.setAttribute('src', './examples/index.html#/pages/' + routerObj.router[0] + "/" + routerObj.router[1] + '/index');
+            iframeEl.setAttribute('src', exampleUrl + '#/pages/' + routerObj.router[0] + "/" + routerObj.router[1] + '/index');
         } else if (!isHome) {
             isHome = true;
-            iframeEl.setAttribute('src', './examples/index.html');
+            iframeEl.setAttribute('src', exampleUrl);
         }
 
         window.doShader(contentEl);

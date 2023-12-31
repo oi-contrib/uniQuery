@@ -14,9 +14,9 @@ body {
 
 }
 
-.version {
+.version-tips {
     color: #F44336;
-    font-family: monospace;
+    font-family: "monospace";
     position: fixed;
     bottom: 10px;
     left: 0;
@@ -79,7 +79,11 @@ body {
     cursor: pointer;
     position: relative;
     color: black;
-    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
 }
 
 .head>nav>span:hover,
@@ -94,7 +98,8 @@ body {
     width: 15px;
     height: 15px;
     position: absolute;
-    top: 4px;
+    top: 12px;
+    right: -22px;
 }
 
 .menu {
@@ -121,10 +126,12 @@ body {
 
 [active='yes'] {
     font-weight: 800;
+
+    border-bottom: 2px solid black;
 }
 
 .menu>h3 {
-    line-height: 30px;
+    line-height: 35px;
     font-size: 18px;
 }
 
@@ -136,10 +143,20 @@ body {
     line-height: 24px;
     font-size: 14px;
     cursor: pointer;
+    font-family: "monospace";
+    display: inline-block;
 }
 
 .menu span:hover {
     text-decoration: underline;
+}
+
+.menu span.sub-title {
+    text-decoration: none;
+    cursor: default;
+    font-weight: 800;
+    padding-top: 5px;
+
 }
 
 
@@ -206,7 +223,7 @@ body {
     margin: 0 5px;
     border-bottom: 1px solid #0286b6;
     padding: 0 5px;
-    font-family: cursive;
+    font-family: "cursive";
     font-weight: 600;
 }
 
@@ -242,7 +259,7 @@ body {
     padding: 0 5px;
     font-size: 20px;
     vertical-align: middle;
-    font-family: cursive;
+    font-family: "cursive";
 }
 
 .content .version,

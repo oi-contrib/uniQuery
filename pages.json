@@ -24,8 +24,7 @@
 		"selectedColor": "#007AFF",
 		"borderStyle": "black",
 		"backgroundColor": "#F8F8F8",
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/index",
 				"iconPath": "static/home.png",
 				"selectedIconPath": "static/home_active.png",
@@ -45,25 +44,38 @@
 			}
 		]
 	},
-	"subPackages": [
-		{
+	"subPackages": [{
 			"root": "pages/component",
-			"pages": [
-				{
-					"path": "tabs/index",
-					"style": {
-						"navigationBarTitleText": "tabs 标签页"
-					}
+			"pages": [{
+				"path": "tabs/index",
+				"style": {
+					"navigationBarTitleText": "tabs 标签页"
 				}
-			]
+			},{
+				"path": "form/index",
+				"style": {
+					"navigationBarTitleText": "form 表单校验"
+				}
+			}]
 		},
 		{
 			"root": "pages/api",
-			"pages": [
-				{
+			"pages": [{
 					"path": "getLocation/index",
 					"style": {
 						"navigationBarTitleText": "getLocation 获取地理位置"
+					}
+				},
+				{
+					"path": "saveAlbum/index",
+					"style": {
+						"navigationBarTitleText": "saveAlbum 保存图片到相册"
+					}
+				},
+				{
+					"path": "chooseImage/index",
+					"style": {
+						"navigationBarTitleText": "chooseImage 选择图片"
 					}
 				}
 			]
@@ -72,7 +84,8 @@
 	"easycom": {
 		"autoscan": true,
 		"custom": {
-			"^ui-(.*)": "@/components/$1/index.vue"
+			"^ui-(.*)": "@/components/$1/index.vue",
+			"vis-canvas": "vislite/uni-app/ui-canvas.vue"
 		}
 	},
 	"globalStyle": {

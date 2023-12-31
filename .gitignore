@@ -20,3 +20,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+access_token.json
+jsapi_ticket.json

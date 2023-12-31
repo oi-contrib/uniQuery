@@ -1,9 +1,10 @@
 {
   "name": "uni-query",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "为uniapp设计的开源组件库，专注最重要的核心组件",
   "main": "libs/index.js",
   "scripts": {
+    "offiaccount": "offiaccount-cli --config offiaccount.config.js",
     "docs": "node ./build/index.js && devby -s 20000"
   },
   "repository": {
@@ -30,10 +31,12 @@
     "scripts": {}
   },
   "dependencies": {
-    "vislite": "^0.5.2"
+    "vislite": "^0.7.0-alpha.0"
   },
   "devDependencies": {
     "devby": "^0.5.1",
-    "zdebug.js": "^0.2.0-beta.1"
+    "wechat-offiaccount": "^0.1.2-rc.0",
+    "weixin-js-sdk": "^1.6.5",
+    "zdebug.js": "^0.2.0"
   }
 }

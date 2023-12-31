@@ -4,5 +4,16 @@ v0.1.0:
       - 初始化版本
         1、组件
             * Tabs 标签页
-        2、API
+v0.2.0:
+    date:
+    changes:
+      - 新增功能
+        1、API
             * getLocation 获取地理位置
+            * saveAlbum 保存图片到相册
+            * chooseImage 选择图片
+        2、组件
+            * Form 表单校验
+        3、权限相关
+            * 微信公众号初始化
+            * 微信小程序《隐私协议》
